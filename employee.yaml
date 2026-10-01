@@ -1,0 +1,92 @@
+apiVersion: digital-employee/v1
+kind: DigitalEmployee
+metadata:
+  id: de_local_review_firefighter
+  name: 差评灭火官
+  alias: null
+  repo: de-local-review-firefighter
+  card_no: 7.4.3 ②
+  group: local
+  group_label: 本地生活服务商家
+  phase: '**P0 首发**（窄切口、家家需要、效果 30 天内可感知）'
+  complexity: M（仅连接器一项为 M）
+  score: 23
+  price: 50–200 元/月（V3 差评预警类 50–100 元/月，据 R4 调研）；**代配置服务加成：200–500 元/次**（三平台授权代办+话术库按店定制，客单价低但配置轻，适合作为引流款的增值项）
+  channels:
+  - GitHub（必备）
+  - '**闲鱼/淘宝**（"差评回复代写"已是热搜服务，截流代运营需求）'
+  - 小红书
+  - Coze 扣子商店
+  license: Proprietary
+  version: 1.0.0
+spec:
+  positioning: 每天 5 分钟守住评分命根子的口碑值班员
+  users: 所有上美团/大众点评/抖音团购的到店门店（数千万级，据 R4 调研）
+  boundary: '**做**：评价监控、情感分级、回复文案生成、差评根因归类、补救建议；**不做**：严禁生成或诱导虚假好评、不做删差评承诺、不代替商家做赔偿决策（只出方案）'
+  kpi: 差评响应时长 ≤2 小时；评分回稳（30 天内不回血可退款承诺的支撑指标）；回复采纳率 ≥80%
+  roi_summary: 单次差评挽损可达千元级；参考案例：单人用 AI 服务 10 家店月入 5000（老陈AI知识库，据 R4 调研）
+  demand_refs:
+  - D08（边缘）
+  demand_support: 弱
+  demand_evidence: 低-中
+runtime:
+  system_prompt: persona/system-prompt.md
+  boundary: persona/boundary.md
+  kpi: persona/kpi.md
+deliverables:
+  skills:
+  - slug: platform-review-read
+    name: 平台评价读取
+    kind: private
+    path: skills/platform-review-read
+    version: 1.0.0
+    maturity: implemented
+  workflows:
+  - slug: wf-local-review-collect
+    name: 评价采集与情感分级
+    path: workflows/wf-local-review-collect
+    version: 1.0.0
+    phase: P0
+    calls:
+    - platform-review-read
+  - slug: wf-local-review-positive-reply
+    name: 好评感谢回复生成
+    path: workflows/wf-local-review-positive-reply
+    version: 1.0.0
+    phase: P0
+    calls:
+    - reply-copy-generator
+  - slug: wf-local-review-firefight
+    name: 差评灭火回复生成
+    path: workflows/wf-local-review-firefight
+    version: 1.0.0
+    phase: P0
+    calls:
+    - reply-copy-generator
+    - complaint-soothe
+  - slug: wf-local-review-root-cause
+    name: 差评根因归类
+    path: workflows/wf-local-review-root-cause
+    version: 1.0.0
+    phase: P0
+    calls:
+    - complaint-soothe
+  - slug: wf-local-review-monthly
+    name: 月度口碑报告
+    path: workflows/wf-local-review-monthly
+    version: 1.0.0
+    phase: P1
+    calls:
+    - platform-review-read
+    - reply-copy-generator
+  knowledge_base: kb/
+  connectors: connectors/bindings.yaml
+external_dependencies:
+- repo: agent-skills-core
+  version: 1.0.0
+  skills:
+  - complaint-soothe
+  - compliance-word-scan
+  - reply-copy-generator
+  resolution: external
+spec_only_dependencies: []

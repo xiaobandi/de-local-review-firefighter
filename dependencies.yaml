@@ -1,0 +1,22 @@
+repo: de-local-review-firefighter
+core:
+  repo: agent-skills-core
+  version: 1.0.0
+  tag: v1.0.0
+dependencies:
+- skill: complaint-soothe
+  name: 差评安抚话术
+  source: agent-skills-core@1.0.0
+  kind: skill
+  required: true
+- skill: compliance-word-scan
+  name: 平台合规词扫描
+  source: agent-skills-core@1.0.0
+  kind: skill
+  required: true
+- skill: reply-copy-generator
+  name: 回复话术生成
+  source: agent-skills-core@1.0.0
+  kind: skill
+  required: true
+resolution_rule: 员工仓库对 core 只做 external_dependency 引用，不内联复制 SKILL.md 正文

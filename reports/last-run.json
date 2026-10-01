@@ -1,0 +1,36 @@
+{
+  "repo": "de-local-review-firefighter",
+  "kind": "employee",
+  "run_at": "2026-09-30T23:54:28+08:00",
+  "cases": 188,
+  "passed": 188,
+  "failed": 0,
+  "by_suite": {
+    "structure": {
+      "total": 50,
+      "failed": 0
+    },
+    "contract": {
+      "total": 26,
+      "failed": 0
+    },
+    "scenario": {
+      "total": 85,
+      "failed": 0
+    },
+    "script": {
+      "total": 9,
+      "failed": 0
+    },
+    "doc": {
+      "total": 3,
+      "failed": 0
+    },
+    "compliance": {
+      "total": 15,
+      "failed": 0
+    }
+  },
+  "skipped": [],
+  "failures": []
+}
