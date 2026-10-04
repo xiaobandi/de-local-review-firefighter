@@ -1,0 +1,15 @@
+{
+  "name": "wf-local-review-collect",
+  "title": "评价采集与情感分级",
+  "kind": "workflow",
+  "owner": "de-local-review-firefighter",
+  "complexity": "M（连接器）",
+  "phase": "P0",
+  "one_liner": "抓取三平台新增评价 → 情感打分 → 好评/中评/差评分桶",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "wf-local-review-firefight",
+  "title": "差评灭火回复生成",
+  "kind": "workflow",
+  "owner": "de-local-review-firefighter",
+  "complexity": "S",
+  "phase": "P0",
+  "one_liner": "根因判断 → 生成公开回复+私信补救话术+补偿方案建议",
+  "pages": [
+    "docs/使用手册.html",
+    "docs/使用示例.html",
+    "docs/用户场景.html",
+    "docs/架构与流程图.html"
+  ]
+}
