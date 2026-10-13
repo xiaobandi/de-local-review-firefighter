@@ -5,6 +5,12 @@
 > **7.4.3 ②**　·　本地生活服务商家　·　阶段 **P0 首发**（窄切口、家家需要、效果 30 天内可感知）　·　
 > 复杂度 M（仅连接器一项为 M）　·　50–200 元/月（V3 差评预警类 50–100 元/月，据 R4 调研）；**代配置服务加成：200–500 元/次**（三平台授权代办+话术库按店定制，客单价低但配置轻，适合作为引流款的增值项）　·　定义卡 7.4.3 ②
 
+## 演示（真实执行录播）
+
+![演示](workflows/wf-local-review-firefight/docs/images/08-demo-run.gif)
+
+*真实执行回放（GIF 自动循环，非摆拍）· [▶ 观看完整版 MP4](workflows/wf-local-review-firefight/docs/images/08-demo-run.mp4) · 台账见 [`reports/real-run/wf-local-review-firefight.md`](reports/real-run/wf-local-review-firefight.md)*
+
 ![架构](docs/images/architecture.svg)
 
 ## 效果（真实执行）
@@ -58,6 +64,7 @@ python3 tests/run.py            # 先跑一遍自检，确认环境与契约都�
 
 ```text
 de-local-review-firefighter/
+├── employee.md            # 人读定义卡（12 主字段 + 2 扩展组，由 employee.yaml 生成）
 ├── employee.yaml          # 机器契约（能力清单 + 依赖锁）
 ├── dependencies.yaml      # 对 core 的外部依赖（含版本）
 ├── persona/               # 运行提示词 / 边界 / KPI
