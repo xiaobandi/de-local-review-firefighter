@@ -2,7 +2,7 @@
 name: platform-review-read
 description: >-
   从本地生活平台读取评价流并统一格式化，供差评灭火与评价分析使用。当用户提到读取评价、平台评价、评价流、评价导出、read reviews、fetch platform reviews 时使用——即使用户没有直接说出上述关键词，只要意图吻合也应触发。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件。若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
 metadata:

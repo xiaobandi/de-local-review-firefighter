@@ -3,7 +3,7 @@ name: wf-local-review-firefight
 description: >-
   差评灭火官 的「差评灭火回复生成」工作流：根因判断 → 生成公开回复+私信补救话术+补偿方案建议。触发方式：事件（新差评）→ **即时推送预警**。
   当用户要完成「差评灭火回复生成」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。

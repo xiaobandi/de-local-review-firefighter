@@ -3,7 +3,7 @@ name: wf-local-review-root-cause
 description: >-
   差评灭火官 的「差评根因归类」工作流：差评聚类（菜品/服务/环境/等位）→ 输出整改清单。触发方式：定时（每周）。
   当用户要完成「差评根因归类」这件事、或触发了上述条件时使用。
-license: Proprietary
+license: Apache-2.0
 compatibility: >-
   需要能读取工作区文件；若环境支持执行代码，将额外启用 scripts/ 下的确定性脚本路径。
   跨 WorkBuddy / ChatGPT / DeepSeek Harness / Kimi Work / 豆包工作。
